@@ -5,16 +5,16 @@
     // Define the schema
     myConnector.getSchema = function(schemaCallback) {
         var cols = [{
-            id: "日期",
+            id: "date",
             dataType: tableau.dataTypeEnum.date
         }, {
-            id: "成本",
+            id: "cost",
             dataType: tableau.dataTypeEnum.float
         }, {
-            id: "激活数",
+            id: "download",
             dataType: tableau.dataTypeEnum.string
         }, {
-            id: "点击率",
+            id: "click",
             dataType: tableau.dataTypeEnum.float
         }];
 
