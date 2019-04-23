@@ -5,24 +5,22 @@
     // Define the schema
     myConnector.getSchema = function(schemaCallback) {
         var cols = [{
-            id: "id",
-            dataType: tableau.dataTypeEnum.string
+            id: "日期",
+            dataType: tableau.dataTypeEnum.date
         }, {
-            id: "mag",
-            alias: "magnitude",
+            id: "成本",
             dataType: tableau.dataTypeEnum.float
         }, {
-            id: "title",
-            alias: "title",
+            id: "激活数",
             dataType: tableau.dataTypeEnum.string
         }, {
-            id: "location",
-            dataType: tableau.dataTypeEnum.geometry
+            id: "点击率",
+            dataType: tableau.dataTypeEnum.float
         }];
 
         var tableSchema = {
-            id: "earthquakeFeed",
-            alias: "Earthquakes with magnitude greater than 4.5 in the last seven days",
+            id: "AD",
+            alias: "AD",
             columns: cols
         };
 
@@ -31,7 +29,7 @@
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
-        $.getJSON("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson", function(resp) {
+        $.getJSON("https://sheetsu.com/apis/v1.0su/edf14537c4b2", function(resp) {
             var feat = resp.features,
                 tableData = [];
 
@@ -55,7 +53,7 @@
     // Create event listeners for when the user submits the form
     $(document).ready(function() {
         $("#submitButton").click(function() {
-            tableau.connectionName = "USGS Earthquake Feed"; // This will be the data source name in Tableau
+            tableau.connectionName = "AD"; // This will be the data source name in Tableau
             tableau.submit(); // This sends the connector object to Tableau
         });
     });
