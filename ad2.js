@@ -9,13 +9,13 @@
     myConnector.getSchema = function(schemaCallback) {
         var cols = [{
             id: "date",
-            dataType: tableau.dataTypeEnum.date
+            dataType: tableau.dataTypeEnum.string
         }, {
             id: "cost",
             dataType: tableau.dataTypeEnum.float
         }, {
             id: "download",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.float
         }, {
             id: "click",
             dataType: tableau.dataTypeEnum.float
