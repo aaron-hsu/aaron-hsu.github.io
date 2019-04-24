@@ -37,13 +37,13 @@
                 tableData = [];
 
             // Iterate over the JSON object
-            for (var i = 0, len = feat.length; i < len; i++) {
+            for (var i = 0, len = resp.length; i < len; i++) {
                 tableData.push({
-                    "date": feat[i].date,
-                    "cost": feat[i].properties.cost,
-                    "download": feat[i].properties.download,
-                    "click": feat[i].properties.click,
-                    "per_cost": feat[i].properties.per_cost
+                    "date": resp[i].date,
+                    "cost": resp[i].properties.cost,
+                    "download": resp[i].properties.download,
+                    "click": resp[i].properties.click,
+                    "per_cost": resp[i].properties.per_cost
                 });
             }
 
