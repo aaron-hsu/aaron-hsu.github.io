@@ -66,6 +66,9 @@
 
     // Create event listeners for when the user submits the form
     $(document).ready(function() {
+        
+        console.log('V.2');
+        
         $("#submitButton").click(function() {
             tableau.connectionName = "AD"; // This will be the data source name in Tableau
             tableau.submit(); // This sends the connector object to Tableau
