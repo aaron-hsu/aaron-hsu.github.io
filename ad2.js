@@ -33,11 +33,18 @@
     // Download the data
     myConnector.getData = function(table, doneCallback) {
         $.getJSON("https://sheetsu.com/apis/v1.0su/edf14537c4b2", function(resp) {
+            
+            
+            console.log(resp);
+            
             var feat = resp.features,
                 tableData = [];
 
             // Iterate over the JSON object
             for (var i = 0, len = resp.length; i < len; i++) {
+                
+                console.log(resp[i]);
+                
                 tableData.push({
                     "date": resp[i].date,
                     "cost": resp[i].cost,
