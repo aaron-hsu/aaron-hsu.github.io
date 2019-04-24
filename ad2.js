@@ -16,6 +16,9 @@
         }, {
             id: "click",
             dataType: tableau.dataTypeEnum.float
+        }, {
+            id: "per_cost",
+            dataType: tableau.dataTypeEnum.float
         }];
 
         var tableSchema = {
@@ -36,10 +39,11 @@
             // Iterate over the JSON object
             for (var i = 0, len = feat.length; i < len; i++) {
                 tableData.push({
-                    "id": feat[i].id,
-                    "mag": feat[i].properties.mag,
-                    "title": feat[i].properties.title,
-                    "location": feat[i].geometry
+                    "date": feat[i].date,
+                    "cost": feat[i].properties.cost,
+                    "download": feat[i].properties.download,
+                    "click": feat[i].properties.click,
+                    "per_cost": feat[i].properties.per_cost
                 });
             }
 
