@@ -40,10 +40,10 @@
             for (var i = 0, len = resp.length; i < len; i++) {
                 tableData.push({
                     "date": resp[i].date,
-                    "cost": resp[i].properties.cost,
-                    "download": resp[i].properties.download,
-                    "click": resp[i].properties.click,
-                    "per_cost": resp[i].properties.per_cost
+                    "cost": resp[i].cost,
+                    "download": resp[i].download,
+                    "click": resp[i].click,
+                    "per_cost": resp[i].per_cost
                 });
             }
 
