@@ -14,13 +14,19 @@
             id: "cost",
             dataType: tableau.dataTypeEnum.string
         }, {
-            id: "download",
+            id: "show",
             dataType: tableau.dataTypeEnum.string
         }, {
             id: "click",
             dataType: tableau.dataTypeEnum.string
         }, {
+            id: "download",
+            dataType: tableau.dataTypeEnum.string
+        } ,{
             id: "per_cost",
+            dataType: tableau.dataTypeEnum.string
+        } ,{
+            id: "ctr",
             dataType: tableau.dataTypeEnum.string
         }];
 
@@ -51,8 +57,10 @@
                 tableData.push({
                     "date": resp[i].date,
                     "cost": resp[i].cost,
+                    "show": resp[i].show,                    
+                    "click": resp[i].click,                                        
                     "download": resp[i].download,
-                    "click": resp[i].click,
+                    "ctr": resp[i].ctr,
                     "per_cost": resp[i].per_cost
                 });
             }
