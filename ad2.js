@@ -23,10 +23,10 @@
             id: "download",
             dataType: tableau.dataTypeEnum.string
         } ,{
-            id: "per_cost",
+            id: "ctr",
             dataType: tableau.dataTypeEnum.string
         } ,{
-            id: "ctr",
+            id: "per_cost",
             dataType: tableau.dataTypeEnum.string
         }];
 
