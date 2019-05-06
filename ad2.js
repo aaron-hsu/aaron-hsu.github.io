@@ -41,7 +41,7 @@
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
-        $.getJSON("https://sheetsu.com/apis/v1.0su/edf14537c4b2", function(resp) {
+        $.getJSON("https://script.google.com/macros/s/AKfycbxIaWgRCHgkYxzjJdRfjahMMddD-flHP-IyUC4lWYmvS2r7f_sX/exec", function(resp) {
             
             
             console.log(resp);
