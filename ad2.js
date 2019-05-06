@@ -46,22 +46,22 @@
             
             console.log(resp);
             
-            var feat = resp.features,
+            var ad_data = resp.ad_data,
                 tableData = [];
 
             // Iterate over the JSON object
-            for (var i = 0, len = resp.length; i < len; i++) {
+            for (var i = 0, len = ad_data.length; i < len; i++) {
                 
-                console.log(resp[i]);
+                console.log(ad_data[i]);
                 
                 tableData.push({
-                    "date": resp[i].date,
-                    "cost": resp[i].cost,
-                    "show": resp[i].show,                    
-                    "click": resp[i].click,                                        
-                    "download": resp[i].download,
-                    "ctr": resp[i].ctr,
-                    "per_cost": resp[i].per_cost
+                    "date": ad_data[i].date,
+                    "cost": ad_data[i].cost,
+                    "show": ad_data[i].show,                    
+                    "click": ad_data[i].click,                                        
+                    "download": ad_data[i].download,
+                    "ctr": ad_data[i].ctr,
+                    "per_cost": ad_data[i].per_cost
                 });
             }
 
