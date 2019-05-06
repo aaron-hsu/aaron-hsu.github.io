@@ -1,6 +1,6 @@
 (function() {
     
-    console.log('V.1');
+    console.log('V.2');
     
     // Create the connector object
     var myConnector = tableau.makeConnector();
